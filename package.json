@@ -1,0 +1,56 @@
+{
+  "name": "@hugeicons/react",
+  "version": "1.0.3",
+  "description": "HugeIcons Pro React Component Library https://hugeicons.com",
+  "homepage": "https://hugeicons.com",
+  "amdName": "hugeicons-pro-react",
+  "main": "./dist/cjs/index.js",
+  "main:umd": "./dist/umd/index.js",
+  "module": "./dist/esm/index.js",
+  "unpkg": "./dist/umd/index.js",
+  "types": "./dist/types/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "author": "Hugeicons",
+  "scripts": {
+    "build": "pnpm clean && pnpm typecheck && pnpm build:bundles",
+    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "typecheck": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.0",
+    "rollup": "^3.0.0",
+    "rollup-plugin-dts": "^5.0.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0"
+  },
+  "keywords": [
+    "icons",
+    "react-icons",
+    "ui-components",
+    "design-system",
+    "vector-icons",
+    "react-component-library",
+    "web-icons",
+    "scalable-icons",
+    "customizable-icons",
+    "icon-library"
+  ]
+}
