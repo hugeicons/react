@@ -2,11 +2,11 @@
 
 # @hugeicons/react
 
-> HugeIcons Pro React Component Library - Beautiful and customizable icons for your React applications
+> Hugeicons Pro React Component Library - Beautiful and customizable icons for your React applications
 
-## What is HugeIcons?
+## What is Hugeicons?
 
-HugeIcons is a comprehensive icon library designed for modern web and mobile applications. The free package includes 4,400+ carefully crafted icons in the Stroke Rounded style, while the pro version offers over 40,000+ icons across 9 unique styles.
+Hugeicons is a comprehensive icon library designed for modern web and mobile applications. The free package includes 4,400+ carefully crafted icons in the Stroke Rounded style, while the pro version offers over 40,000+ icons across 9 unique styles.
 
 ### Key Highlights
 - **4,400+ Free Icons**: Extensive collection of Stroke Rounded icons covering essential UI elements, actions, and concepts
@@ -20,7 +20,7 @@ HugeIcons is a comprehensive icon library designed for modern web and mobile app
 ![a40aa766-1b04-4a2a-a2e6-0ec3c492b96a](https://github.com/hugeicons/hugeicons-react/assets/130147052/f82c0e0e-60ae-4617-802f-812cdc7a58da)
 
 ## Table of Contents
-- [What is HugeIcons?](#what-is-hugeicons)
+- [What is Hugeicons?](#what-is-hugeicons)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -292,4 +292,4 @@ This project is licensed under the [MIT License](LICENSE.md).
 ## Related
 
 - [@hugeicons/core-free-icons](https://www.npmjs.com/package/@hugeicons/core-free-icons) - Free icon package
-- [HugeIcons Website](https://hugeicons.com) - Browse all available icons
+- [Hugeicons Website](https://hugeicons.com) - Browse all available icons
