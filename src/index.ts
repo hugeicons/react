@@ -1,3 +1,2 @@
-export { default as HugeiconsIcon } from './components/HugeiconsIcon';
-export type { HugeiconsIconProps } from './components/HugeiconsIcon';
-export type { HugeiconsProps } from './create-hugeicon-singleton'; 
+export { default as HugeiconsIcon } from './HugeiconsIcon';
+export type { HugeiconsIconProps, HugeiconsProps, IconSvgElement } from './HugeiconsIcon'; 

@@ -6,12 +6,13 @@
 
 ## What is HugeIcons?
 
-HugeIcons is a comprehensive icon library designed for modern web and mobile applications. The free package includes 4,000+ carefully crafted icons in the Stroke Rounded style, while the pro version offers over 36,000 icons across 9 unique styles.
+HugeIcons is a comprehensive icon library designed for modern web and mobile applications. The free package includes 4,400+ carefully crafted icons in the Stroke Rounded style, while the pro version offers over 40,000+ icons across 9 unique styles.
 
 ### Key Highlights
-- **4,000+ Free Icons**: Extensive collection of Stroke Rounded icons covering essential UI elements, actions, and concepts
+- **4,400+ Free Icons**: Extensive collection of Stroke Rounded icons covering essential UI elements, actions, and concepts
 - **Pixel Perfect**: Every icon is crafted on a 24x24 pixel grid ensuring crisp, clear display at any size
 - **Customizable**: Easily adjust colors, sizes, and styles to match your design needs
+- **Multicolor Support**: Full multicolor customization for Bulk, Duotone, and Twotone styles in the Pro version
 - **Regular Updates**: New icons added regularly to keep up with evolving design trends
 
 > 📚 **Looking for Pro Icons?** Check out our comprehensive documentation at [docs.hugeicons.com](https://docs.hugeicons.com) for detailed information about pro icons, styles, and advanced usage.
@@ -27,6 +28,7 @@ HugeIcons is a comprehensive icon library designed for modern web and mobile app
 - [Examples](#examples)
   - [Basic Usage](#basic-usage)
   - [Custom Size and Color](#custom-size-and-color)
+  - [Multicolor Examples](#multicolor-examples)
   - [Interactive Examples](#interactive-examples)
 - [Performance](#performance)
 - [Troubleshooting](#troubleshooting)
@@ -39,6 +41,7 @@ HugeIcons is a comprehensive icon library designed for modern web and mobile app
 ## Features
 
 - 🎨 Customizable colors and sizes
+- 🌈 Multicolor support for Bulk, Duotone, and Twotone styles
 - 💪 TypeScript support with full type definitions
 - 🎯 Tree-shakeable for optimal bundle size
 - 📦 Multiple bundle formats (ESM, CJS, UMD)
@@ -88,6 +91,9 @@ function App() {
 | `showAlt` | `boolean` | `false` | When true, displays the altIcon instead of the main icon |
 | `size` | `number` | `24` | Icon size in pixels |
 | `color` | `string` | `currentColor` | Icon color (CSS color value) |
+| `primaryColor` | `string` | `currentColor` | Primary color for multicolor icons (Bulk, Duotone, Twotone styles) |
+| `secondaryColor` | `string` | - | Secondary color for multicolor icons (Bulk, Duotone, Twotone styles) |
+| `disableSecondaryOpacity` | `boolean` | `false` | When true, disables the default opacity applied to the secondary color |
 | `strokeWidth` | `number` | `1.5` | Width of the icon strokes (works with stroke-style icons) |
 | `className` | `string` | - | Additional CSS classes |
 
@@ -109,6 +115,49 @@ import { NotificationIcon } from '@hugeicons/core-free-icons';
   icon={NotificationIcon}
   size={32}
   color="#FF5733"
+/>
+```
+
+### Multicolor Examples
+
+#### Bulk Style with Custom Colors
+```jsx
+import { HugeiconsIcon } from '@hugeicons/react';
+import { DocumentIcon } from '@hugeicons-pro/core-bulk-rounded';
+
+<HugeiconsIcon
+  icon={DocumentIcon}
+  size={32}
+  primaryColor="#4361EE"
+  secondaryColor="#B5CCFF"
+  disableSecondaryOpacity={true}
+/>
+```
+
+#### Duotone Style with Custom Colors
+```jsx
+import { HugeiconsIcon } from '@hugeicons/react';
+import { CalendarIcon } from '@hugeicons-pro/core-duotone-rounded';
+
+<HugeiconsIcon
+  icon={CalendarIcon}
+  size={32}
+  primaryColor="#FF5733"
+  secondaryColor="#FFD6CC"
+/>
+```
+
+#### Twotone Style with Custom Colors
+```jsx
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ChartIcon } from '@hugeicons-pro/core-twotone-rounded';
+
+<HugeiconsIcon
+  icon={ChartIcon}
+  size={32}
+  primaryColor="#10B981"
+  secondaryColor="#D1FAE5"
+  disableSecondaryOpacity={true}
 />
 ```
 

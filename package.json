@@ -1,8 +1,9 @@
 {
   "name": "@hugeicons/react",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "HugeIcons Pro React Component Library https://hugeicons.com",
   "homepage": "https://hugeicons.com",
+  "license": "SEE LICENSE IN LICENSE.md",
   "amdName": "hugeicons-pro-react",
   "main": "./dist/cjs/index.js",
   "main:umd": "./dist/umd/index.js",
@@ -11,7 +12,9 @@
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "LICENSE.md",
+    "README.md"
   ],
   "exports": {
     ".": {
@@ -25,7 +28,9 @@
     "build": "pnpm clean && pnpm typecheck && pnpm build:bundles",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "typecheck": "tsc",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "publish:beta": "pnpm build && npm publish --tag beta --no-git-checks",
+    "publish:prod": "pnpm build && npm publish --no-git-checks"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",
