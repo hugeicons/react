@@ -4,6 +4,17 @@ import terser from '@rollup/plugin-terser';
 import dts from 'rollup-plugin-dts';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import { writeFileSync, mkdirSync } from 'fs';
+
+// Plugin to generate package.json with "type": "module" for ESM build
+const generateEsmPackageJson = () => ({
+  name: 'generate-esm-package-json',
+  writeBundle(options) {
+    if (options.dir && options.dir.includes('esm')) {
+      writeFileSync(`${options.dir}/package.json`, JSON.stringify({ type: 'module' }, null, 2));
+    }
+  }
+});
 
 const input = 'src/index.ts';
 const external = id => /^react($|\/)/.test(id);
@@ -53,7 +64,7 @@ export default defineConfig([
       preserveModulesRoot: 'src'
     },
     external,
-    plugins: basePlugins
+    plugins: [...basePlugins, generateEsmPackageJson()]
   },
 
   // CJS build
