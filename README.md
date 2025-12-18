@@ -1,23 +1,26 @@
-![31c9262e-aeea-4403-9086-3c8b88885cab](https://github.com/hugeicons/hugeicons-react/assets/130147052/ff91f2f0-095a-4c6d-8942-3af4759f9021)
+![Hugeicons Logo](https://raw.githubusercontent.com/hugeicons/react/refs/heads/main/assets/logo.png)
 
 # @hugeicons/react
 
-> Hugeicons Pro React Component Library - Beautiful and customizable icons for your React applications
+> Hugeicons React Component Library for fast, customizable icons with TypeScript and tree-shaking support
 
 ## What is Hugeicons?
 
-Hugeicons is a comprehensive icon library designed for modern web and mobile applications. The free package includes 4,400+ carefully crafted icons in the Stroke Rounded style, while the pro version offers over 40,000+ icons across 9 unique styles.
+Hugeicons is a large icon set for modern web and mobile apps. The free package includes 4,600+ Stroke Rounded icons. The Pro package provides 46,000+ icons across 10 styles with multicolor support for Bulk, Duotone, and Twotone styles.
 
 ### Key Highlights
-- **4,400+ Free Icons**: Extensive collection of Stroke Rounded icons covering essential UI elements, actions, and concepts
-- **Pixel Perfect**: Every icon is crafted on a 24x24 pixel grid ensuring crisp, clear display at any size
+- **4,600+ Free Icons**: Stroke Rounded set for unlimited personal and commercial projects
+- **46,000+ Pro Icons, 10 Styles**: Stroke, Solid, Bulk, Duotone, and Twotone families for sharp, rounded, and standard needs with richer variants
+- **Pixel Perfect Grid**: Built on a 24x24 grid for crisp rendering at any size
 - **Customizable**: Easily adjust colors, sizes, and styles to match your design needs
 - **Multicolor Support**: Full multicolor customization for Bulk, Duotone, and Twotone styles in the Pro version
+- **Tree Shaking Ready**: Named exports keep bundles lean in modern bundlers
 - **Regular Updates**: New icons added regularly to keep up with evolving design trends
 
-> 📚 **Looking for Pro Icons?** Check out our comprehensive documentation at [docs.hugeicons.com](https://docs.hugeicons.com) for detailed information about pro icons, styles, and advanced usage.
 
-![a40aa766-1b04-4a2a-a2e6-0ec3c492b96a](https://github.com/hugeicons/hugeicons-react/assets/130147052/f82c0e0e-60ae-4617-802f-812cdc7a58da)
+> **Looking for Pro Icons?** Check out our docs at [hugeicons.com/docs](https://hugeicons.com/docs) for detailed information about pro icons, styles, and advanced usage.
+
+![Hugeicons react icons](https://raw.githubusercontent.com/hugeicons/react/refs/heads/main/assets/icons.png)
 
 ## Table of Contents
 - [What is Hugeicons?](#what-is-hugeicons)
@@ -28,8 +31,7 @@ Hugeicons is a comprehensive icon library designed for modern web and mobile app
 - [Examples](#examples)
   - [Basic Usage](#basic-usage)
   - [Custom Size and Color](#custom-size-and-color)
-  - [Multicolor Examples](#multicolor-examples)
-  - [Interactive Examples](#interactive-examples)
+  - [More examples and patterns](#more-examples-and-patterns)
 - [Performance](#performance)
 - [Troubleshooting](#troubleshooting)
 - [Browser Support](#browser-support)
@@ -40,13 +42,12 @@ Hugeicons is a comprehensive icon library designed for modern web and mobile app
 
 ## Features
 
-- 🎨 Customizable colors and sizes
-- 🌈 Multicolor support for Bulk, Duotone, and Twotone styles
-- 💪 TypeScript support with full type definitions
-- 🎯 Tree-shakeable for optimal bundle size
-- 📦 Multiple bundle formats (ESM, CJS, UMD)
-- ⚡ Lightweight and optimized
-- 🔄 Alternate icon support for dynamic interactions
+- Customizable colors, sizes, and stroke width
+- Multicolor support for Bulk, Duotone, and Twotone styles
+- TypeScript support with full type definitions
+- Tree shakeable builds (ESM, CJS, UMD) for bundlers like Vite, Next.js, and CRA
+- Optimized SVGs for small payloads and fast render
+- Alternate icon support for dynamic interactions
 
 ## Installation
 
@@ -118,120 +119,10 @@ import { NotificationIcon } from '@hugeicons/core-free-icons';
 />
 ```
 
-### Multicolor Examples
+### More examples and patterns
 
-#### Bulk Style with Custom Colors
-```jsx
-import { HugeiconsIcon } from '@hugeicons/react';
-import { DocumentIcon } from '@hugeicons-pro/core-bulk-rounded';
-
-<HugeiconsIcon
-  icon={DocumentIcon}
-  size={32}
-  primaryColor="#4361EE"
-  secondaryColor="#B5CCFF"
-  disableSecondaryOpacity={true}
-/>
-```
-
-#### Duotone Style with Custom Colors
-```jsx
-import { HugeiconsIcon } from '@hugeicons/react';
-import { CalendarIcon } from '@hugeicons-pro/core-duotone-rounded';
-
-<HugeiconsIcon
-  icon={CalendarIcon}
-  size={32}
-  primaryColor="#FF5733"
-  secondaryColor="#FFD6CC"
-/>
-```
-
-#### Twotone Style with Custom Colors
-```jsx
-import { HugeiconsIcon } from '@hugeicons/react';
-import { ChartIcon } from '@hugeicons-pro/core-twotone-rounded';
-
-<HugeiconsIcon
-  icon={ChartIcon}
-  size={32}
-  primaryColor="#10B981"
-  secondaryColor="#D1FAE5"
-  disableSecondaryOpacity={true}
-/>
-```
-
-### Interactive Examples
-
-#### Search Bar with Clear Button
-```jsx
-import { useState } from 'react';
-import { HugeiconsIcon } from '@hugeicons/react';
-import { SearchIcon, CloseCircleIcon } from '@hugeicons/core-free-icons';
-
-function SearchBar() {
-  const [value, setValue] = useState('');
-
-  return (
-    <div>
-      <input
-        type="text"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder="Search..."
-      />
-      <HugeiconsIcon
-        icon={SearchIcon}
-        altIcon={CloseCircleIcon}
-        showAlt={value.length > 0}
-        onClick={() => value.length > 0 && setValue('')}
-      />
-    </div>
-  );
-}
-```
-
-#### Theme Toggle
-```jsx
-import { useState } from 'react';
-import { HugeiconsIcon } from '@hugeicons/react';
-import { SunIcon, MoonIcon } from '@hugeicons/core-free-icons';
-
-function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
-
-  return (
-    <button onClick={() => setIsDark(!isDark)}>
-      <HugeiconsIcon
-        icon={SunIcon}
-        altIcon={MoonIcon}
-        showAlt={isDark}
-      />
-    </button>
-  );
-}
-```
-
-#### Menu Toggle
-```jsx
-import { useState } from 'react';
-import { HugeiconsIcon } from '@hugeicons/react';
-import { MenuIcon, CancelIcon } from '@hugeicons/core-free-icons';
-
-function MenuButton() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <button onClick={() => setIsOpen(!isOpen)}>
-      <HugeiconsIcon
-        icon={MenuIcon}
-        altIcon={CancelIcon}
-        showAlt={isOpen}
-      />
-    </button>
-  );
-}
-```
+- Examples: https://hugeicons.com/docs/integrations/react/examples
+- Best practices: https://hugeicons.com/docs/integrations/react/best-practices
 
 ## Performance
 
@@ -253,7 +144,8 @@ function MenuButton() {
 
 3. **Bundle size concerns?**
    - Use named imports instead of importing the entire icon set
-   - Implement code splitting for different sections of your app
+   - Add code splitting for different sections of your app
+   - Verify your bundler is configured to tree shake ESM builds
 
 ## Browser Support
 
@@ -268,8 +160,8 @@ The library supports all modern browsers.
 
 ## Pro Version
 
-> 🌟 **Want access to 36,000+ icons and 9 unique styles?** 
-> Check out our [Pro Version](https://hugeicons.com/pricing) and visit [docs.hugeicons.com](https://docs.hugeicons.com) for comprehensive documentation.
+> **Want access to 46,000+ icons and 10 unique styles?** 
+> Check out our [Pro Version](https://hugeicons.com/pricing) and visit our [docs](https://hugeicons.com/docs) for detailed documentation.
 
 ### Available Pro Styles
 - **Stroke Styles**
@@ -283,6 +175,7 @@ The library supports all modern browsers.
 - **Special Styles**
   - Bulk Rounded (`@hugeicons-pro/core-bulk-rounded`)
   - Duotone Rounded (`@hugeicons-pro/core-duotone-rounded`)
+  - Duotone Standard (`@hugeicons-pro/core-duotone-standard`)
   - Twotone Rounded (`@hugeicons-pro/core-twotone-rounded`)
 
 ## License
