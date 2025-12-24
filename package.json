@@ -56,15 +56,14 @@
     "react": ">=16.0.0"
   },
   "keywords": [
+    "hugeicons",
+    "react",
     "icons",
     "react-icons",
-    "ui-components",
-    "design-system",
+    "svg-icons",
+    "svg",
     "vector-icons",
-    "react-component-library",
-    "web-icons",
-    "scalable-icons",
-    "customizable-icons",
-    "icon-library"
+    "icon-library",
+    "typescript"
   ]
 }
