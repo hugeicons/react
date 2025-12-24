@@ -1,12 +1,19 @@
-![Hugeicons Logo](https://raw.githubusercontent.com/hugeicons/react/refs/heads/main/assets/logo.png)
+![Hugeicons Logo](https://raw.githubusercontent.com/hugeicons/react/main/assets/logo.png)
 
 # @hugeicons/react
 
-> Hugeicons React Component Library for fast, customizable icons with TypeScript and tree-shaking support
+> Hugeicons React rendering library for fast, customizable icons with TypeScript and tree-shaking support
 
 ## What is Hugeicons?
 
 Hugeicons is a large icon set for modern web and mobile apps. The free package includes 4,600+ Stroke Rounded icons. The Pro package provides 46,000+ icons across 10 styles with multicolor support for Bulk, Duotone, and Twotone styles.
+
+## How It Works
+
+This package (`@hugeicons/react`) is a **rendering library** - it provides the `HugeiconsIcon` component that displays icons in your React app. The icons themselves come from separate icon packages:
+
+- **Free icons**: `@hugeicons/core-free-icons` (4,600+ icons)
+- **Pro icons**: `@hugeicons-pro/core-*` packages (46,000+ icons, requires license)
 
 ### Key Highlights
 - **4,600+ Free Icons**: Stroke Rounded set for unlimited personal and commercial projects
@@ -20,10 +27,11 @@ Hugeicons is a large icon set for modern web and mobile apps. The free package i
 
 > **Looking for Pro Icons?** Check out our docs at [hugeicons.com/docs](https://hugeicons.com/docs) for detailed information about pro icons, styles, and advanced usage.
 
-![Hugeicons react icons](https://raw.githubusercontent.com/hugeicons/react/refs/heads/main/assets/icons.png)
+![Hugeicons Icons](https://raw.githubusercontent.com/hugeicons/react/main/assets/icons.png)
 
 ## Table of Contents
 - [What is Hugeicons?](#what-is-hugeicons)
+- [How It Works](#how-it-works)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -87,15 +95,16 @@ function App() {
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `icon` | `IconType` | Required | The main icon to display |
-| `altIcon` | `IconType` | - | Alternative icon that can be used for states, interactions, animations, or dynamic icon swapping |
+| `icon` | `IconSvgElement` | Required | The main icon to display |
+| `altIcon` | `IconSvgElement` | - | Alternative icon for states, interactions, or dynamic icon swapping |
 | `showAlt` | `boolean` | `false` | When true, displays the altIcon instead of the main icon |
-| `size` | `number` | `24` | Icon size in pixels |
+| `size` | `number \| string` | `24` | Icon size in pixels |
 | `color` | `string` | `currentColor` | Icon color (CSS color value) |
-| `primaryColor` | `string` | `currentColor` | Primary color for multicolor icons (Bulk, Duotone, Twotone styles) |
+| `strokeWidth` | `number` | `1.5` | Width of the icon strokes |
+| `absoluteStrokeWidth` | `boolean` | `false` | When true, the stroke width will be scaled relative to the icon size |
+| `primaryColor` | `string` | - | Primary color for multicolor icons (Bulk, Duotone, Twotone styles) |
 | `secondaryColor` | `string` | - | Secondary color for multicolor icons (Bulk, Duotone, Twotone styles) |
-| `disableSecondaryOpacity` | `boolean` | `false` | When true, disables the default opacity applied to the secondary color |
-| `strokeWidth` | `number` | `1.5` | Width of the icon strokes (works with stroke-style icons) |
+| `disableSecondaryOpacity` | `boolean` | `false` | Disables the default opacity applied to the secondary color |
 | `className` | `string` | - | Additional CSS classes |
 
 ## Examples
@@ -180,7 +189,14 @@ The library supports all modern browsers.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.md).
+The code in this package (`@hugeicons/react`) is licensed under the MIT License.
+
+This package only provides rendering utilities. It does not include or grant any rights to Hugeicons icon assets. Using Pro icon styles requires a valid Hugeicons Pro license.
+
+Hugeicons icon packs are licensed separately:
+- **Free icon packs**: use the license included with the specific free icon package you install.
+- **Pro icon packs (`@hugeicons-pro/*`)**: require a paid Hugeicons Pro license and are governed by the Hugeicons Pro Terms (see [Pro License](PRO-LICENSE.md).).
+
 
 ## Related
 

@@ -1,5 +1,13 @@
 # @hugeicons/react
 
+## 1.1.4
+
+### Patch Changes
+
+- Clarified licensing: the `@hugeicons/react` renderer code is MIT-licensed (`LICENSE.md`)
+- Added `PRO-LICENSE.md` with Hugeicons Pro product license/policy for Pro icon packs (`@hugeicons-pro/*`)
+- Updated README to reflect the renderer vs icon-pack licensing split
+- Added "How It Works" section explaining the rendering library concept
 
 ## 1.1.3
 
