@@ -2,11 +2,11 @@
 
 # @hugeicons/react
 
-> Hugeicons React rendering library for fast, customizable icons with TypeScript and tree-shaking support
+> A fast, customizable, tree-shakeable React icon renderer for Hugeicons. Use `HugeiconsIcon` with `@hugeicons/core-free-icons` or `@hugeicons-pro/core-*` to render SVG icons in React (TypeScript-ready).
 
 ## What is Hugeicons?
 
-Hugeicons is a large icon set for modern web and mobile apps. The free package includes 4,600+ Stroke Rounded icons. The Pro package provides 46,000+ icons across 10 styles with multicolor support for Bulk, Duotone, and Twotone styles.
+Hugeicons is a beautiful [icon library](https://hugeicons.com/react-icons) for modern web and mobile apps. The free package includes 4,600+ Stroke Rounded React icons. The Pro package provides 46,000+ React icons across 10 styles, including multicolor support for Bulk, Duotone, and Twotone styles.
 
 ## How It Works
 

@@ -1,5 +1,11 @@
 # @hugeicons/react
 
+## 1.1.5
+
+### Patch Changes
+
+- Updated README intro copy to better emphasize React icons and link to the React icons library page
+
 ## 1.1.4
 
 ### Patch Changes
