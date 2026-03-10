@@ -1,5 +1,11 @@
 # @hugeicons/react
 
+## 1.1.6
+
+### Patch Changes
+
+- Updated README icon counts to 5,100+ free icons and 51,000+ pro icons
+
 ## 1.1.5
 
 ### Patch Changes
