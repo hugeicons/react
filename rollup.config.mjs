@@ -4,7 +4,7 @@ import terser from '@rollup/plugin-terser';
 import dts from 'rollup-plugin-dts';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import { writeFileSync, mkdirSync } from 'fs';
+import { copyFileSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
 
 // Plugin to generate package.json with "type": "module" for ESM build
 const generateEsmPackageJson = () => ({
@@ -12,6 +12,21 @@ const generateEsmPackageJson = () => ({
   writeBundle(options) {
     if (options.dir && options.dir.includes('esm')) {
       writeFileSync(`${options.dir}/package.json`, JSON.stringify({ type: 'module' }, null, 2));
+    }
+  }
+});
+
+// Plugin to copy ambient .d.ts files and reference them from the entry
+const copyAmbientTypes = () => ({
+  name: 'copy-ambient-types',
+  writeBundle(options) {
+    if (options.dir && options.dir.includes('types')) {
+      copyFileSync('src/core-free-icons.d.ts', `${options.dir}/core-free-icons.d.ts`);
+      const indexPath = `${options.dir}/index.d.ts`;
+      const content = readFileSync(indexPath, 'utf8');
+      if (!content.startsWith('/// <reference path=')) {
+        writeFileSync(indexPath, `/// <reference path="./core-free-icons.d.ts" />\n${content}`);
+      }
     }
   }
 });
@@ -105,6 +120,6 @@ export default defineConfig([
       preserveModulesRoot: 'src'
     },
     external,
-    plugins: [dts()]
+    plugins: [dts(), copyAmbientTypes()]
   }
 ]);

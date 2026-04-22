@@ -138,6 +138,7 @@ import { NotificationIcon } from '@hugeicons/core-free-icons';
 - **Tree-shaking**: The package is fully tree-shakeable, ensuring only the icons you use are included in your final bundle
 - **Optimized SVGs**: All icons are optimized for size and performance
 - **Code Splitting**: Icons can be easily code-split when using dynamic imports
+- **Subpath imports**: `import SearchIcon from "@hugeicons/core-free-icons/SearchIcon"` loads one icon instead of the full barrel
 
 ## Troubleshooting
 
@@ -153,6 +154,7 @@ import { NotificationIcon } from '@hugeicons/core-free-icons';
 
 3. **Bundle size concerns?**
    - Use named imports instead of importing the entire icon set
+   - Use subpath imports (`import Icon from "@hugeicons/core-free-icons/Icon"`) to cut dev-bundle size
    - Add code splitting for different sections of your app
    - Verify your bundler is configured to tree shake ESM builds
 
